@@ -22,74 +22,74 @@ const Files = [
         filename: 'index.js',
         content: `import ${ComponentName} from './src/main';
 
-            /* istanbul ignore next */
-            ${ComponentName}.install = function(Vue) {
-              Vue.component(${ComponentName}.name, ${ComponentName});
-            };
+/* istanbul ignore next */
+${ComponentName}.install = function(Vue) {
+  Vue.component(${ComponentName}.name, ${ComponentName});
+};
 
-            export default ${ComponentName};`
+export default ${ComponentName};`
     },
     {
         filename: 'cooking.conf.js',
         content: `var cooking = require('cooking');
-              var gen = require('../../build/gen-single-config');
+var gen = require('../../build/gen-single-config');
 
-              cooking.set(gen(__dirname, 'El${ComponentName}'));
+cooking.set(gen(__dirname, 'El${ComponentName}'));
 
-              module.exports = cooking.resolve();
-              `
+module.exports = cooking.resolve();
+`
     },
     {
         filename: 'package.json',
         content: `{
-                "name": "element-${componentname}",
-                "version": "0.0.0",
-                "description": "A ${componentname} component for Vue.js.",
-                "keywords": [
-                  "element",
-                  "vue",
-                  "component"
-                ],
-                "main": "./lib/index.js",
-                "repository": "https://github.com/ElemeFE/element/tree/master/packages/${componentname}",
-                "author": "elemefe",
-                "license": "MIT",
-                "dependencies": {}
-              }`
+  "name": "element-${componentname}",
+  "version": "0.0.0",
+  "description": "A ${componentname} component for Vue.js.",
+  "keywords": [
+    "element",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "https://github.com/ElemeFE/element/tree/master/packages/${componentname}",
+  "author": "elemefe",
+  "license": "MIT",
+  "dependencies": {}
+}`
     },
     {
         filename: 'src/main.vue',
         content: `<template>
-                    <div class="el-${componentname}"></div>
-                  </template>
+  <div class="el-${componentname}"></div>
+</template>
 
-                  <script>
-                    export default {
-                        name: 'El${ComponentName}'
-                    };
-                  </script>`
+<script>
+export default {
+  name: 'El${ComponentName}'
+};
+</script>`
     },
     {
-        filename: path.join('../../examples/docs', `${componentname}.md`),
+        filename: path.join('../../docs', `${componentname}.md`),
         content: `## ${ComponentName} ${chineseName}`
     },
     {
         filename: path.join('../../test/unit/specs', `${componentname}.spec.js`),
         content: `import { createTest, destroyVM } from '../util';
-              import ${ComponentName} from 'packages/${componentname}';
+import ${ComponentName} from 'packages/${componentname}';
 
-              describe('${ComponentName}', () => {
-                let vm;
-                afterEach(() => {
-                  destroyVM(vm);
-              });
+describe('${ComponentName}', () => {
+  let vm;
+  afterEach(() => {
+    destroyVM(vm);
+  });
 
-              it('create', () => {
-                vm = createTest(${ComponentName}, true);
-                expect(vm.$el).to.exist;
-              });
-           });
-            `
+  it('create', () => {
+    vm = createTest(${ComponentName}, true);
+    expect(vm.$el).to.exist;
+  });
+});
+`
     }
 ];
 

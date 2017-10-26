@@ -1,9 +1,9 @@
 <template>
-                    <div class="el-collapse"></div>
-                  </template>
+  <div class="el-collapse"></div>
+</template>
 
-                  <script>
-                    export default {
-                        name: 'ElCollapse'
-                    };
-                  </script>
+<script>
+export default {
+  name: 'ElCollapse'
+};
+</script>
