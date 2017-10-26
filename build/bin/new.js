@@ -70,12 +70,8 @@ const Files = [
                   </script>`
     },
     {
-        filename: path.join('../../examples/docs/zh-CN', `${componentname}.md`),
+        filename: path.join('../../examples/docs', `${componentname}.md`),
         content: `## ${ComponentName} ${chineseName}`
-    },
-    {
-        filename: path.join('../../examples/docs/en-US', `${componentname}.md`),
-        content: `## ${ComponentName}`
     },
     {
         filename: path.join('../../test/unit/specs', `${componentname}.spec.js`),
@@ -114,22 +110,5 @@ Files.forEach(file => {
         .write(file.content, 'utf8')
         .end('\n');
 });
-
-// 添加到 nav.config.json
-const navConfigFile = require('../../examples/nav.config.json');
-
-Object.keys(navConfigFile).forEach(lang => {
-    let groups = navConfigFile[lang][3].groups;
-    groups[groups.length - 1].list.push({
-        path: `/${componentname}`,
-        title: lang === 'zh-CN' && componentname !== chineseName
-            ? `${ComponentName} ${chineseName}`
-            : ComponentName
-    });
-});
-
-fileSave(path.join(__dirname, '../../examples/nav.config.json'))
-    .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
-    .end('\n');
 
 console.log('DONE!');
