@@ -1,7 +1,7 @@
 "use strict";
 
-process.on('exit', function () {
-    console.log('exit！');
+process.on('exit', function() {
+    console.log('Process exit.')
 });
 
 if(!process.argv[2]) {
@@ -15,47 +15,60 @@ const upperCamelcase = require('uppercamelcase');
 const componentname = process.argv[2];
 const chineseName = process.argv[3] || componentname;
 const ComponentName = upperCamelcase(componentname);
-const PackagePath = path.resolve(__dirname, '../../packages', componentname);
+const PackagePath = path.join(__dirname, '../../packages', componentname);
+
 const Files = [{
     filename: 'index.js',
-    content: `import EL${ComponentName} from './src/main.vue'
-    
+    content: `import EL${ComponentName} from './src/${componentname}'
+
 /* istanbul ignore next */
 EL${ComponentName}.install = function(Vue){
     Vue.component(EL${ComponentName}.name, EL${ComponentName});
-}
-export default EL${ComponentName}`
+};
+
+export default 'EL${ComponentName};'`
 }, {
-    filename: 'src/main.vue',
+    filename: `./src/${componentname}.vue`,
     content: `<template>
     <div class="el-${componentname}"></div>
 </template>
 
-<script>
 export default {
-    name: 'EL${ComponentName}'
-}
-</script>`
+    name: EL${ComponentName}
+}`
 }, {
-    filename: path.join('../../test/unit/specs', `${componentname}.spec.js`),
-    content: `import {createTest, destoryVM} from '../util'
-import EL${ComponentName} from 'packages/${componentname}'
+    filename: `../../test/unit/specs/${componentname}.spec.js`,
+    content: `import {createTest, destroyVM} from '../util';
+import EL${ComponentName} from 'packages/${componentname}';
 
 describe(EL${ComponentName}, () => {
     let vm;
     afterEach(() => {
-        destoryVM(vm);
+        destroyVM(vm);
     });
     
     it('create', () => {
-        createTest(EL${ComponentName}, true);
-        expect(vm.$el).to.exist;
+        vm = createTest(EL${ComponentName}, true);
+        expect(vm.$el).to.be.exist;     
     });
 });`
 }];
 
-Files.forEach(function (file) {
+// component.json
+const componentsjson = require('../../components.json');
+if(componentsjson[componentname]) {
+    console.log(`${componentname}组件已存在！`);
+    process.exit(1);
+}
+
+componentsjson[componentname] = `./packages/${componentname}/index.js`;
+fileSave(path.join(__dirname, '../../components.json'))
+    .write(JSON.stringify(componentsjson, null, '  '), 'utf-8')
+    .end('\n');
+
+// 添加package
+Files.forEach(file => {
     fileSave(path.join(PackagePath, file.filename))
-        .write(file.content)
+        .write(file.content, 'utf-8')
         .end('\n');
 });
