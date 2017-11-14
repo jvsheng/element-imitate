@@ -6,4 +6,4 @@ before_install:
 - export TRAVIS_COMMIT_USER="$(git log --no-merges -n 1 --format=%an)"
 - export TRAVIS_COMMIT_EMAIL="$(git log --no-merges -n 1 --format=%ae)"
 after_success:
-- NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+- cat ./test/unit/coverage/lcov.info | ./node_modules/.bin/coveralls
