@@ -15,7 +15,7 @@ module.exports = function(config) {
         files: ['./index.js'],
 
         preprocessors: {
-            './index.js': ['webpack', 'sourcemap']
+            './index.js': ['webpack', 'sourcemap', 'coverage']
         },
 
         webpack: webpackConfig,
@@ -26,6 +26,7 @@ module.exports = function(config) {
 
         coverageReporter: {
             dir: './coverage',
+            includeAllSources: true,
             reporters: [
                 { type: 'lcov', subdir: '.' },
                 { type: 'text-summary' }
