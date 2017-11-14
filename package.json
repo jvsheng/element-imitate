@@ -6,6 +6,10 @@
     "type": "git",
     "url": "git+https://github.com/jvsheng/Re-Element.git"
   },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack --config build/webpack.base.conf.js",
+    "unit": "karma start test/unit/karma.conf.js --single-run"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jvsheng/Re-Element/issues"
@@ -61,7 +65,7 @@
     "karma-sinon-chai": "^1.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "^1.8.0",
+    "karma-webpack": "^2.0.6",
     "lerna": "^2.4.0",
     "lolex": "^1.5.1",
     "markdown-it": "^6.1.1",
@@ -86,7 +90,7 @@
     "vue-router": "^2.0.0",
     "vue-template-compiler": "^2.3.0",
     "vue-template-es2015-compiler": "^1.5.2",
-    "webpack": "^1.13.2",
+    "webpack": "^3.8.1",
     "webpack-dev-server": "^1.15.1",
     "webpack-node-externals": "^1.5.4"
   }
