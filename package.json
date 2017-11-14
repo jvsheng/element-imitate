@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack --config build/webpack.base.conf.js",
-    "unit": "karma start test/unit/karma.conf.js --single-run"
+    "test": "karma start test/unit/karma.conf.js --single-run"
   },
   "license": "MIT",
   "bugs": {
