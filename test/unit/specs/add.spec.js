@@ -9,4 +9,5 @@ describe('add suit', () => {
         let result = add(5, 4);
         expect(result).to.equal(5);
     })
+
 });
