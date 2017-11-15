@@ -8,14 +8,14 @@ module.exports = function(config) {
 
         browsers: ['PhantomJS'],
 
-        frameworks: ['mocha'],
+        frameworks: ['mocha', 'sinon-chai'],
 
         reporters: ['spec', 'coverage'],
 
         files: ['./index.js'],
 
         preprocessors: {
-            './index.js': ['webpack', 'sourcemap', 'coverage']
+            './index.js': ['webpack', 'sourcemap']
         },
 
         webpack: webpackConfig,
@@ -26,7 +26,6 @@ module.exports = function(config) {
 
         coverageReporter: {
             dir: './coverage',
-            includeAllSources: true,
             reporters: [
                 { type: 'lcov', subdir: '.' },
                 { type: 'text-summary' }
