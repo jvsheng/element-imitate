@@ -7,6 +7,6 @@ describe('add suit', () => {
     });
     it('branch', () => {
         let result = add(5, 4);
-        expect(result).to.equal(4);
+        expect(result).to.equal(5);
     })
 });
