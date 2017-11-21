@@ -4,9 +4,8 @@
 
 ## Article
 - [通过node简化组件目录的生成](https://github.com/jvsheng/element-imitate/issues/1)
-- [测试用例的工具函数](https://github.com/jvsheng/element-imitate/issues/2)
-- [搭建Karma+webpack测试环境，Travis CI持续集成](https://github.com/jvsheng/element-imitate/issues/3)
+> file-save模块、es6模板字符串、path模块、js处理json文件
 
-|Article|Detail|
-|-|-|
-|通过node自动生成默认的组件模板|file-save模块<br> es6模板字符串<br> path模块<br> js处理json文件<br>|
+- [测试用例的工具函数](https://github.com/jvsheng/element-imitate/issues/2)
+
+- [搭建Karma+webpack测试环境，Travis CI持续集成](https://github.com/jvsheng/element-imitate/issues/3)
