@@ -9,4 +9,4 @@
 
 |Article|Detail|
 |-|-|
-|通过node自动生成默认的组件模板|file-save模块、es6模板字符串、path模块、js处理json文件|
+|通过node自动生成默认的组件模板|file-save模块<br> es6模板字符串<br> path模块<br> js处理json文件<br>|
