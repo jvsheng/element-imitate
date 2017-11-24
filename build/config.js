@@ -3,28 +3,28 @@ var fs = require('fs');
 var nodeExternals = require('webpack-node-externals');
 var Components = require('../components.json');
 
-var utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
-var mixinsList = fs.readdirSync(path.resolve(__dirname, '../src/mixins'));
-var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'));
+// var utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
+// var mixinsList = fs.readdirSync(path.resolve(__dirname, '../src/mixins'));
+// var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'));
 var externals = {};
 
 Object.keys(Components).forEach(function(key) {
     externals[`element-imitate/packages/${key}`] = `element-imitate/lib/${key}`;
 });
 
-externals['element-imitate/src/locale'] = 'element-imitate/lib/locale';
-utilsList.forEach(function(file) {
-    file = path.basename(file, '.js');
-    externals[`element-imitate/src/utils/${file}`] = `element-imitate/lib/utils/${file}`;
-});
-mixinsList.forEach(function(file) {
-    file = path.basename(file, '.js');
-    externals[`element-imitate/src/mixins/${file}`] = `element-imitate/lib/mixins/${file}`;
-});
-transitionList.forEach(function(file) {
-    file = path.basename(file, '.js');
-    externals[`element-imitate/src/transitions/${file}`] = `element-imitate/lib/transitions/${file}`;
-});
+// externals['element-imitate/src/locale'] = 'element-imitate/lib/locale';
+// utilsList.forEach(function(file) {
+//     file = path.basename(file, '.js');
+//     externals[`element-imitate/src/utils/${file}`] = `element-imitate/lib/utils/${file}`;
+// });
+// mixinsList.forEach(function(file) {
+//     file = path.basename(file, '.js');
+//     externals[`element-imitate/src/mixins/${file}`] = `element-imitate/lib/mixins/${file}`;
+// });
+// transitionList.forEach(function(file) {
+//     file = path.basename(file, '.js');
+//     externals[`element-imitate/src/transitions/${file}`] = `element-imitate/lib/transitions/${file}`;
+// });
 
 externals = [Object.assign({
 }, externals)];
