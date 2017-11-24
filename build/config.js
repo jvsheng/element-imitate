@@ -32,7 +32,7 @@ externals = [Object.assign({
 exports.externals = externals;
 
 exports.alias = {
-    'vue$': 'vue/dist/vue.esm.js',
+    'vue$': 'vue/dist/vue.js',
     main: path.resolve(__dirname, '../src'),
     packages: path.resolve(__dirname, '../packages'),
     examples: path.resolve(__dirname, '../examples'),

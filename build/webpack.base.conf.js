@@ -1,10 +1,11 @@
 const path = require('path');
 const config = require('./config');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/main.js'),
+    entry: path.resolve(__dirname, '../src/index.js'),
     output: {
         filename: 'index.[hash].js',
         path: path.resolve(__dirname, '../lib'),
@@ -32,14 +33,15 @@ module.exports = {
         extensions: ['.js', '.vue', '.json'],
         alias: config.alias
     },
-    externals: {
-        vue: config.vue
-    },
     plugins: [
-        new CleanWebpackPlugin(path.resolve(__dirname, '../lib')),
+        new CleanWebpackPlugin(['lib/'], { root: path.resolve(__dirname, '..') }),
         new HtmlWebpackPlugin({
-            title: 'element-imitate'
+            title: 'element-imitate',
+            template: path.resolve(__dirname, '../src/index.html')
         })
     ],
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './lib'
+    }
 };
