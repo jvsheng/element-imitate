@@ -1,14 +1,14 @@
 import {createTest, destroyVM} from '../util';
-import ELCollapse from 'packages/Collapse';
+import ElCollapse from 'packages/collapse';
 
-describe(ELCollapse, () => {
+describe(ElCollapse, () => {
     let vm;
     afterEach(() => {
         destroyVM(vm);
     });
-    
+
     it('create', () => {
-        vm = createTest(ELCollapse, true);
-        expect(vm.$el).to.be.exist;     
+        vm = createTest(ElCollapse, true);
+        expect(vm.$el).to.be.exist;
     });
 });

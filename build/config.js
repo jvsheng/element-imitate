@@ -34,7 +34,7 @@ exports.externals = externals;
 exports.alias = {
     'vue$': 'vue/dist/vue.js',
     main: path.resolve(__dirname, '../src'),
-    packages: path.resolve(__dirname, '../packages'),
+    'packages': path.resolve(__dirname, '../packages'),
     examples: path.resolve(__dirname, '../examples'),
     'element-imitate': path.resolve(__dirname, '../')
 }

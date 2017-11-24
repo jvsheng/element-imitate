@@ -1,11 +1,14 @@
 <template lang="html">
   <div class="app" class="red">
-      app vue components
+    <el-collapse-item :title='"hello"' :name='"1"'></el-collapse-item>
   </div>
 </template>
 
 <script>
+import ElCollapseItem from '../packages/collapse/src/collapse-item.vue';
 export default {
-    el: '#app'
+  components: {
+    ElCollapseItem
+  }
 }
 </script>
