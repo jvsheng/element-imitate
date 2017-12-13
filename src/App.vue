@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="app" class="red">
+  <div class="app">
     <el-collapse-item :title='"hello world"' :name='"1"'></el-collapse-item>
   </div>
 </template>
