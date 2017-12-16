@@ -1,0 +1,73 @@
+/*
+Error: Invalid GBK character "\xE5"
+        on line 7 of mixins/mixins.scss
+        from line 2 of display.scss
+
+2: @import "../common/var";
+3: 
+4: /* Break-points
+5:  -------------------------- *\/
+6: @mixin res($key, $map: $--breakpoints) {
+7:   // 循环断点Map，如果存在则返回
+8:   @if map-has-key($map, $key) {
+9:     @media only screen and #{inspect(map-get($map, $key))} {
+10:       @content;
+11:     }
+12:   } @else {
+
+Backtrace:
+mixins/mixins.scss:7
+display.scss:2
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1300:in `rescue in block in find_encoding_error'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1297:in `block in find_encoding_error'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each_with_index'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `find_encoding_error'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:911:in `rescue in check_sass_encoding'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:907:in `check_sass_encoding'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:436:in `check_encoding!'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:392:in `_to_tree'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/bin/scss:13:in `<top (required)>'
+C:/RailsInstaller/Ruby2.1.0/bin/scss:23:in `load'
+C:/RailsInstaller/Ruby2.1.0/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE5\"\A         on line 7 of mixins/mixins.scss\A         from line 2 of display.scss\A \A 2: @import \"../common/var\";\A 3: \A 4: /* Break-points\A 5:  -------------------------- */\A 6: @mixin res($key, $map: $--breakpoints) {\A 7:   // 循环断点Map，如果存在则返回\A 8:   @if map-has-key($map, $key) {\A 9:     @media only screen and #{inspect(map-get($map, $key))} {\A 10:       @content;\A 11:     }\A 12:   } @else {"; }

@@ -1,0 +1,72 @@
+/*
+Error: Invalid GBK character "\xE7"
+        on line 28 of pagination.scss
+        from line 2 of index.scss
+
+23: 
+24:   .el-input__inner {
+25:     text-align: center;
+26:   }
+27: 
+28:   // pagesize 的下拉 icon
+29:   .el-input__suffix {
+30:     right: 0;
+31:     transform: scale(.8);
+32:   }
+33: 
+
+Backtrace:
+pagination.scss:28
+index.scss:2
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1300:in `rescue in block in find_encoding_error'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1297:in `block in find_encoding_error'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each_with_index'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `find_encoding_error'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:905:in `check_sass_encoding'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:436:in `check_encoding!'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:392:in `_to_tree'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/bin/scss:13:in `<top (required)>'
+C:/RailsInstaller/Ruby2.1.0/bin/scss:23:in `load'
+C:/RailsInstaller/Ruby2.1.0/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE7\"\A         on line 28 of pagination.scss\A         from line 2 of index.scss\A \A 23: \A 24:   .el-input__inner {\A 25:     text-align: center;\A 26:   }\A 27: \A 28:   // pagesize 的下拉 icon\A 29:   .el-input__suffix {\A 30:     right: 0;\A 31:     transform: scale(.8);\A 32:   }\A 33: "; }

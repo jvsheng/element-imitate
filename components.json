@@ -1,3 +1,12 @@
 {
-  "collapse": "./packages/collapse/index.js"
+  "icon": "./packages/icon/index.js",
+  "scrollbar": "./packages/scrollbar/index.js",
+  "container": "./packages/container/index.js",
+  "header": "./packages/header/index.js",
+  "aside": "./packages/aside/index.js",
+  "main": "./packages/main/index.js",
+  "footer": "./packages/footer/index.js",
+  "col": "./packages/col/index.js",
+  "row": "./packages/row/index.js",
+  "popover": "./packages/popover/index.js"
 }
