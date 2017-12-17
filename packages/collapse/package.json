@@ -1,0 +1,15 @@
+{
+  "name": "element-collapse",
+  "version": "0.0.0",
+  "description": "A collapse component for Vue.js.",
+  "keywords": [
+    "element",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "https://github.com/ElemeFE/element/tree/master/packages/collapse",
+  "author": "elemefe",
+  "license": "MIT",
+  "dependencies": {}
+}

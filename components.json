@@ -1,5 +1,7 @@
 {
   "icon": "./packages/icon/index.js",
+  "button": "./packages/button/index.js",
+  "button-group": "./packages/button-group/index.js",
   "scrollbar": "./packages/scrollbar/index.js",
   "container": "./packages/container/index.js",
   "header": "./packages/header/index.js",
@@ -8,5 +10,7 @@
   "footer": "./packages/footer/index.js",
   "col": "./packages/col/index.js",
   "row": "./packages/row/index.js",
-  "popover": "./packages/popover/index.js"
+  "popover": "./packages/popover/index.js",
+  "collapse": "./packages/collapse/index.js",
+  "collapse-item": "./packages/collapse-item/index.js"
 }

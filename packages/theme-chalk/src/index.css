@@ -1,29 +1,30 @@
 /*
-Error: Invalid GBK character "\xE7"
-        on line 28 of pagination.scss
-        from line 2 of index.scss
+Error: Invalid GBK character "\xE5"
+        on line 81 of dialog.scss
+        from line 3 of index.scss
 
-23: 
-24:   .el-input__inner {
-25:     text-align: center;
-26:   }
-27: 
-28:   // pagesize 的下拉 icon
-29:   .el-input__suffix {
-30:     right: 0;
-31:     transform: scale(.8);
-32:   }
-33: 
+76:     padding-top: 10px;
+77:     text-align: right;
+78:     box-sizing: border-box;
+79:   }
+80: 
+81:   // 内容居中布局
+82:   @include m(center) {
+83:     text-align: center;
+84: 
+85:     @include e(header) {
+86:       padding-top: 30px;
 
 Backtrace:
-pagination.scss:28
-index.scss:2
+dialog.scss:81
+index.scss:3
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1300:in `rescue in block in find_encoding_error'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1297:in `block in find_encoding_error'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each_with_index'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `find_encoding_error'
-C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:905:in `check_sass_encoding'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:911:in `rescue in check_sass_encoding'
+C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/util.rb:907:in `check_sass_encoding'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:436:in `check_encoding!'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:392:in `_to_tree'
 C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
@@ -69,4 +70,4 @@ C:/RailsInstaller/Ruby2.1.0/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid GBK character \"\xE7\"\A         on line 28 of pagination.scss\A         from line 2 of index.scss\A \A 23: \A 24:   .el-input__inner {\A 25:     text-align: center;\A 26:   }\A 27: \A 28:   // pagesize 的下拉 icon\A 29:   .el-input__suffix {\A 30:     right: 0;\A 31:     transform: scale(.8);\A 32:   }\A 33: "; }
+  content: "Error: Invalid GBK character \"\xE5\"\A         on line 81 of dialog.scss\A         from line 3 of index.scss\A \A 76:     padding-top: 10px;\A 77:     text-align: right;\A 78:     box-sizing: border-box;\A 79:   }\A 80: \A 81:   // 内容居中布局\A 82:   @include m(center) {\A 83:     text-align: center;\A 84: \A 85:     @include e(header) {\A 86:       padding-top: 30px;"; }
