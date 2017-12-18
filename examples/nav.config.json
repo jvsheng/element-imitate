@@ -239,14 +239,6 @@
             {
               "path": "/collapse",
               "title": "Collapse 折叠面板"
-            },
-            {
-              "path": "/collapse",
-              "title": "Collapse"
-            },
-            {
-              "path": "/collapse-item",
-              "title": "CollapseItem"
             }
           ]
         }

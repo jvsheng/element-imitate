@@ -2,7 +2,7 @@ import {addClass, removeClass} from 'main/utils/dom';
 
 class Transition {
   beforeEnter(el) {
-    console.log(el.scrollHeight);
+    // console.log(el.scrollHeight);
     if (!el.dataset) el.dataset = {};
     el.dataset.overflow = el.style.overflow;
     el.dataset.paddingTop = el.style.paddingTop;
@@ -15,7 +15,7 @@ class Transition {
   }
 
   enter(el) {
-    console.log(el.scrollHeight);
+    // console.log(el.scrollHeight);
     el.style.height = el.scrollHeight + 'px';
     el.style.paddingTop = el.dataset.paddingTop;
     el.style.paddingBottom = el.dataset.paddingBottom;
@@ -23,14 +23,14 @@ class Transition {
   }
 
   afterEnter(el) {
-    console.log(el.scrollHeight);
+    // console.log(el.scrollHeight);
     removeClass(el, 'collapse-transition');
     el.style.height = '';
     el.style.overflow = el.dataset.overflow;
   }
 
   beforeLeave(el) {
-    console.log(el.scrollHeight);
+    // console.log(el.scrollHeight);
     if (!el.dataset) el.dataset = {};
     el.dataset.overflow = el.style.overflow;
     el.dataset.paddingTop = el.style.paddingTop;
@@ -41,7 +41,7 @@ class Transition {
   }
 
   leave(el) {
-    console.log(el.scrollHeight);
+    // console.log(el.scrollHeight);
     addClass(el, 'collapse-transition');
     setTimeout(function() {
       el.style.height = '0';
@@ -49,7 +49,7 @@ class Transition {
   }
 
   afterLeave(el) {
-    console.log(el.scrollHeight);
+    // console.log(el.scrollHeight);
     removeClass(el, 'collapse-transition');
     el.style.height = '';
     el.style.overflow = el.dataset.overflow;

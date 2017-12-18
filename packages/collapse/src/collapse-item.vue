@@ -1,5 +1,5 @@
 <template>
-  <div class="el-collapse-item">
+  <div class="el-collapse-item" :class="{'is-active': isActive}">
     <div class="el-collapse-item_header" @click="handleClick">
       {{title}}
       <slot name="title"></slot>
@@ -48,7 +48,6 @@
       handleClick() {
         this.dispatch('ElCollapse', 'item-click', this.name);
       }
-  }
-  }
-  ;
+    }
+  };
 </script>

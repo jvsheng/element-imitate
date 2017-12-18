@@ -11,7 +11,13 @@
     componentName: 'ElCollapse',
 
     props: {
-      value: Array
+      accordion: Boolean,
+      value: {
+        type: [Array, String, Number],
+        default() {
+          return [];
+        }
+      }
     },
 
     data() {
@@ -28,23 +34,27 @@
 
     watch: {
       value(value) {
-        // this.activeNames = [].concat(value);
+        this.activeNames = [].concat(value);
       }
     },
 
     methods: {
-      handleClick(data) {
-        let index = this.activeNames.indexOf(data);
-        if (index > -1) {
-          this.activeNames.splice(index, 1);
+      handleItemClick(data) {
+        if (this.accordion) {
+          this.activeNames = this.activeNames[0] && this.activeNames[0] === data ? '' : [].concat(data);
         } else {
-          this.activeNames.push(data);
+          let index = this.activeNames.indexOf(data);
+          if (index > -1) {
+            this.activeNames.splice(index, 1);
+          } else {
+            this.activeNames.push(data);
+          }
         }
       }
     },
 
     created() {
-      this.$on('item-click', this.handleClick);
+      this.$on('item-click', this.handleItemClick);
     }
 
   };

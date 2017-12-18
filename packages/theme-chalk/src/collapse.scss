@@ -10,12 +10,17 @@
     line-height: 48px;
     border-bottom: 1px solid #ebeef5;
     cursor: pointer;
+    transition: border-bottom .3s ease-in-out;
   }
   &_wrap {
     line-height: 1.7;
     border-bottom: 1px solid #ebeef5;
   }
   &_content {
-    padding: 20px 0;
+    padding: 0 0 20px 0;
+  }
+
+  &.is-active .el-collapse_header{
+    border-bottom: none;
   }
 }
