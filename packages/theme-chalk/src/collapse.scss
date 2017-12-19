@@ -11,6 +11,11 @@
     border-bottom: 1px solid #ebeef5;
     cursor: pointer;
     transition: border-bottom .3s ease-in-out;
+    outline: none;
+
+    &.focusing:focus:not(:hover){
+      color: #409eff;
+    }
   }
   &_wrap {
     line-height: 1.7;
