@@ -12,5 +12,6 @@
   "row": "./packages/row/index.js",
   "popover": "./packages/popover/index.js",
   "collapse": "./packages/collapse/index.js",
-  "collapse-item": "./packages/collapse-item/index.js"
+  "collapse-item": "./packages/collapse-item/index.js",
+  "loading": "./packages/loading/index.js"
 }

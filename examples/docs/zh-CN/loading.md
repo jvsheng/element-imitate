@@ -1,3 +1,11 @@
-## Loading 加载
+## Loading loading
+<script>
+  module.exports = {
+  };
+</script>
 
-加载数据时显示动效。
+:::demo
+```html
+<div v-loading="true" text="loading"></div>
+```
+:::

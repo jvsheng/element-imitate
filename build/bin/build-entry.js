@@ -29,7 +29,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component);
   });
 
-  // Vue.use(Loading.directive);
+  Vue.use(Loading.directive);
 
   const ELEMENT = {};
   ELEMENT.size = opts.size || '';
@@ -56,7 +56,6 @@ module.exports = {
   i18n: locale.i18n,
   install,
   CollapseTransition,
-  // Loading,
 {{list}}
 };
 `;

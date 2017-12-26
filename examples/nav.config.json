@@ -493,6 +493,10 @@
             {
               "path": "/collapse-item",
               "title": "CollapseItem"
+            },
+            {
+              "path": "/loading",
+              "title": "Loading"
             }
           ]
         }

@@ -14,6 +14,7 @@ import Row from '../packages/row/index.js';
 import Popover from '../packages/popover/index.js';
 import Collapse from '../packages/collapse/index.js';
 import CollapseItem from '../packages/collapse-item/index.js';
+import Loading from '../packages/loading/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -45,7 +46,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component);
   });
 
-  // Vue.use(Loading.directive);
+  Vue.use(Loading.directive);
 
   const ELEMENT = {};
   ELEMENT.size = opts.size || '';
@@ -72,7 +73,6 @@ module.exports = {
   i18n: locale.i18n,
   install,
   CollapseTransition,
-  // Loading,
   Icon,
   Button,
   ButtonGroup,
