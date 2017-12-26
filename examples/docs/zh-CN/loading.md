@@ -1,11 +1,13 @@
-## Loading loading
+## Loading
 <script>
   module.exports = {
+    loading: false
   };
 </script>
 
+### demo
 :::demo
 ```html
-<div v-loading="true" text="loading"></div>
+<div v-loading="loading" style="width: 100%; height: 100px;"></div>
 ```
 :::
